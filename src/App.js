@@ -1,5 +1,5 @@
 import React from "react";
-import { Star, ShoppingCart, Search, User } from "lucide-react";
+import { Star, Search, User } from "lucide-react";
 import { motion } from "framer-motion";
 import "./index.css";
 
@@ -9,27 +9,66 @@ function Nav() {
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className="inline-grid place-items-center h-12 w-12 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 text-white font-extrabold shadow-lg">C2T</div>
-          <div>
-            <div className="text-lg font-extrabold text-slate-900">Chefs2Table</div>
-            <div className="text-xs text-muted-foreground text-orange-600">Gourmet Meals, Exceptional Deals</div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div
+              style={{
+                color: 'rgba(193, 30, 30, 1)',
+                margin: '0 auto',
+                font: '800 46px/56px Inter, sans-serif',
+                lineHeight: '1',
+              }}
+            >
+              Chefs2Table
+            </div>
+            <div style={{ fontWeight: 600, margin: '0 auto' }}>
+              Gourmet Meals, Exceptional Deals
+            </div>
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-4 bg-white/60 backdrop-blur rounded-xl p-1 border border-orange-100 shadow-sm">
-          <a className="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-orange-600 shadow">Discover</a>
-          <a className="px-4 py-2 rounded-lg text-sm font-semibold text-orange-700 hover:bg-orange-50">Order</a>
-          <a className="px-4 py-2 rounded-lg text-sm font-semibold text-orange-700 hover:bg-orange-50">Profile</a>
-        </nav>
-
+        {/* Cart / Sign in group (kept minimal per diff) */}
         <div className="flex items-center gap-3">
-          <button className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-orange-100 shadow-sm">
-            <ShoppingCart className="w-4 h-4 text-orange-600" />
-            <span className="text-sm font-medium">Cart</span>
+          <button
+            aria-label="cart"
+            style={{ display: 'inline-block', borderColor: 'rgb(0, 0, 0)', backgroundColor: 'transparent', font: '400 13px Arial' }}
+            className="p-2 rounded"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
           </button>
           <button className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-orange-100 shadow-sm">
             <User className="w-4 h-4 text-slate-700" />
             <span className="text-sm font-medium">Sign in</span>
           </button>
+        </div>
+      </div>
+
+      {/* Red navigation band per diff */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '34px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: 30, height: 65, backgroundColor: 'rgba(211, 82, 82, 1)' }}>
+          <div
+            style={{
+              gap: 20,
+              display: 'flex',
+              alignItems: 'center',
+              height: '100%',
+              padding: '0 12px',
+              justifyContent: 'center',
+            }}
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 0, textAlign: 'center' }}>
+              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Discover</div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 20, textAlign: 'center' }}>
+              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Order</div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 20, textAlign: 'center' }}>
+              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Profile</div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
