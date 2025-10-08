@@ -1,0 +1,11 @@
+{
+  "name": "chefs2table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Add your real build script here'"
+  },
+  "author": "",
+  "license": "ISC"
+}
