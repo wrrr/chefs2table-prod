@@ -7,7 +7,7 @@ import { MapPin, Star, ShoppingCart, Flame, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import { ChefDashboard } from "./components/ChefDashboard";
 
-export default function Chefs2TableApp() {
+export default function App() {
   return (
     <main className="min-h-screen bg-white px-4 py-6">
       {/* Logo & Hero */}
