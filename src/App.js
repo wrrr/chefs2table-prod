@@ -63,3 +63,34 @@ export default function App() {
               </div>
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4 text-yellow-500" />
+                <span className="text-sm font-medium">4.8</span>
+              </div>
+            </div>
+            <p className="text-sm mt-2">Today's Dish: Saffron Chicken Tahdig</p>
+            <Button className="mt-3 w-full">Order Now</Button>
+          </CardContent>
+        </Card>
+      </motion.section>
+
+      {/* Footer Icons */}
+      <footer className="fixed bottom-0 left-0 right-0 bg-white shadow-md p-2 flex justify-around">
+        <Button variant="ghost" className="flex flex-col items-center">
+          <Flame className="w-5 h-5" />
+          <span className="text-xs">Trending</span>
+        </Button>
+        <Button variant="ghost" className="flex flex-col items-center">
+          <ShoppingCart className="w-5 h-5" />
+          <span className="text-xs">Orders</span>
+        </Button>
+        <Button variant="ghost" className="flex flex-col items-center">
+          <Brain className="w-5 h-5" />
+          <span className="text-xs">AI Picks</span>
+        </Button>
+        <Button variant="ghost" className="flex flex-col items-center">
+          <MapPin className="w-5 h-5" />
+          <span className="text-xs">Near Me</span>
+        </Button>
+      </footer>
+    </main>
+  );
+}
