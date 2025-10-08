@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MapPin, Star, ShoppingCart, Flame, Brain } from "lucide-react";
 import { motion } from "framer-motion";
+import { ChefDashboard } from "./components/ChefDashboard";
 
 export default function Chefs2TableApp() {
   return (
