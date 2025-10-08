@@ -1,5 +1,12 @@
-// Example index.js for chefs2table GitHub Pages site
-document.addEventListener('DOMContentLoaded', function() {
-  // Any simple client-side enhancements for chefs2table
-  console.log('Welcome to chefs2table!');
-});
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+// Modern React setup (React 18+)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
