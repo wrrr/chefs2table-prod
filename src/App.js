@@ -33,6 +33,7 @@ export default function App() {
 
       {/* Discover Section: Responsive Cards */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mb-24">
+        {/* Chef Maria Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,26 +42,3 @@ export default function App() {
         >
           <div className="flex justify-between items-center mb-3">
             <div>
-              <h2 className="text-xl font-bold text-orange-900 flex items-center gap-2">
-                <span>🔥 Chef Maria</span>
-              </h2>
-              <p className="text-sm text-orange-500">Authentic Cuban Cuisine</p>
-            </div>
-            <div className="flex items-center gap-1">
-              <Star className="w-5 h-5 text-yellow-500" />
-              <span className="text-base font-semibold text-gray-800">4.9</span>
-            </div>
-          </div>
-          <p className="mt-2 text-gray-700 text-sm">Today's Dish: Ropa Vieja with Plantains</p>
-          <button className="mt-6 px-6 py-2 bg-orange-500 text-white font-bold rounded-lg shadow hover:bg-orange-600 transition-all w-full">Order Now</button>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white rounded-xl shadow-md p-6 flex flex-col"
-        >
-          <div className="flex justify-between items-center mb-3">
-            <div>
-              <h2 className="text-xl font
