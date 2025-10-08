@@ -1,5 +1,5 @@
 import React from "react";
-import { Star, Search, User } from "lucide-react";
+import { Star, Search } from "lucide-react";
 import { motion } from "framer-motion";
 import "./index.css";
 
@@ -8,58 +8,45 @@ function Nav() {
     <header className="sticky top-4 z-40">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div style={{ color: 'rgb(144, 26, 24)', fontSize: '26px', fontWeight: 400, lineHeight: '60px' }}>
-            <div style={{ display: 'inline', fontWeight: 600, fontSize: 45, lineHeight: '68px' }}>
+          <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', font: '400 26px/54px __Inter_d65c78, sans-serif' }}>
+            <div style={{ display: 'inline', fontSize: 45, fontWeight: 600, lineHeight: '68px', marginRight: 'auto' }}>
               Chefs2Table.com
             </div>
           </div>
 
-          <div style={{ fontWeight: 600, lineHeight: '0px', fontSize: '21px', margin: '0 auto' }}>
-            <p style={{ textIndent: '2em', margin: 0 }}>Gourmet Meals, Exceptional Deals</p>
+          <div style={{ fontSize: '21px', fontWeight: 600, lineHeight: '0px', margin: '0 auto' }}>
+            <div style={{ fontWeight: 600, textIndent: '42px' }}>
+              Gourmet Meals, Exceptional Deals
+            </div>
           </div>
-        </div>
-
-        {/* Cart / Sign in group (kept minimal per diff) */}
-        <div className="flex items-center gap-3">
-          <button
-            aria-label="cart"
-            style={{ display: 'inline-block', borderColor: 'rgb(0, 0, 0)', backgroundColor: 'transparent', font: '400 13px Arial' }}
-            className="p-2 rounded"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-          </button>
-          <button className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-orange-100 shadow-sm">
-            <User className="w-4 h-4 text-slate-700" />
-            <span className="text-sm font-medium">Sign in</span>
-          </button>
         </div>
       </div>
 
       {/* Red navigation band per diff */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '34px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: 30, height: 65, backgroundColor: 'rgba(211, 82, 82, 1)' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '34px', marginTop: '15px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: 30, height: 65, backgroundColor: 'rgba(199, 64, 64, 1)' }}>
           <div
             style={{
               gap: 20,
               display: 'flex',
               alignItems: 'center',
+              fontWeight: 400,
               height: '100%',
               padding: '0 12px',
               justifyContent: 'center',
+              color: 'rgba(175, 27, 27, 1)',
+              lineHeight: '20px',
+              backgroundColor: 'rgba(199, 64, 64, 1)'
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 0, textAlign: 'center' }}>
-              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Discover</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 20, textAlign: 'center' }}>
-              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Order</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 'normal', width: '33%', marginLeft: 20, textAlign: 'center' }}>
-              <div style={{ display: 'inline', fontWeight: 400, lineHeight: '45px', fontSize: 34, color: 'rgba(255,255,255,1)', margin: '0 auto' }}>Profile</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
             </div>
           </div>
         </div>
