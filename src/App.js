@@ -8,23 +8,14 @@ function Nav() {
     <header className="sticky top-4 z-40">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div style={{ color: 'rgba(144, 26, 24, 1)', fontSize: '26px', lineHeight: '60px' }}>
-            <span style={{ color: 'rgb(144, 26, 24)' }}>Chefs2Table.com</span>
+          <div style={{ color: 'rgb(144, 26, 24)', fontSize: '26px', fontWeight: 400, lineHeight: '60px' }}>
+            <div style={{ display: 'inline', fontWeight: 600, fontSize: 45, lineHeight: '68px' }}>
+              Chefs2Table.com
+            </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div
-              style={{
-                color: 'rgba(193, 30, 30, 1)',
-                margin: '0 auto',
-                font: '800 46px/56px Inter, sans-serif',
-                lineHeight: '1',
-              }}
-            >
-              Chefs2Table
-            </div>
-            <div style={{ fontWeight: 600, margin: '0 auto' }}>
-              Gourmet Meals, Exceptional Deals
-            </div>
+
+          <div style={{ fontWeight: 600, lineHeight: '0px', fontSize: '21px', margin: '0 auto' }}>
+            <p style={{ textIndent: '2em', margin: 0 }}>Gourmet Meals, Exceptional Deals</p>
           </div>
         </div>
 
