@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
-import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Card, CardContent } from "./ui/Card";
+import { Button } from "./ui/Button";
+import { Tabs, TabsList, TabsTrigger } from "./ui/Tabs";
+import { Input } from "./ui/Input";
+import { Textarea } from "./ui/Textarea";
 import { UploadCloud, CheckCircle, Percent, Trophy } from "lucide-react";
 
 export function ChefDashboard() {
