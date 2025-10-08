@@ -8,7 +8,9 @@ function Nav() {
     <header className="sticky top-4 z-40">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div className="inline-grid place-items-center h-12 w-12 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 text-white font-extrabold shadow-lg">C2T</div>
+          <div style={{ color: 'rgba(144, 26, 24, 1)', fontSize: '26px', lineHeight: '60px' }}>
+            <span style={{ color: 'rgb(144, 26, 24)' }}>Chefs2Table.com</span>
+          </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div
               style={{
