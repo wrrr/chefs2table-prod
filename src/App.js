@@ -6,6 +6,8 @@ import { Tabs, TabsList, TabsTrigger } from "./components/ui/Tabs";
 import { MapPin, Star, ShoppingCart, Flame, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import { ChefDashboard } from "./components/ChefDashboard";
+import './index.css';
+
 
 export default function App() {
   return (
