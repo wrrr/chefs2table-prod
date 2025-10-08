@@ -23,11 +23,11 @@ function Nav() {
       </div>
 
       {/* Red navigation band per diff */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '34px', marginTop: '15px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, gap: '34px', margin: '24px 0 -3px', padding: '0 200px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: 30, height: 65, backgroundColor: 'rgba(199, 64, 64, 1)' }}>
           <div
             style={{
-              gap: 20,
+              gap: '27px',
               display: 'flex',
               alignItems: 'center',
               fontWeight: 400,
@@ -36,16 +36,16 @@ function Nav() {
               justifyContent: 'center',
               color: 'rgba(175, 27, 27, 1)',
               lineHeight: '20px',
-              backgroundColor: 'rgba(199, 64, 64, 1)'
+              backgroundColor: 'rgba(255, 255, 255, 1)'
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
               <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
               <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', color: 'rgba(209, 139, 8, 1)', backgroundColor: 'rgba(209, 139, 8, 1)', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden' }}>
               <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
             </div>
           </div>
