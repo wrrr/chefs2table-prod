@@ -1,98 +1,66 @@
 import React from "react";
-import { Card, CardContent } from "./components/ui/Card";
-import { Button } from "./components/ui/Button";
-import { Input } from "./components/ui/Input";
-import { Tabs, TabsList, TabsTrigger } from "./components/ui/Tabs";
 import { MapPin, Star, ShoppingCart, Flame, Brain } from "lucide-react";
 import { motion } from "framer-motion";
-import { ChefDashboard } from "./components/ChefDashboard";
-import './index.css';
-
+import './index.css'; // Tailwind should be set up here
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6">
+    <main className="min-h-screen bg-gradient-to-b from-white to-orange-50 flex flex-col items-center px-4 py-8">
       {/* Logo & Hero */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-6"
+        className="flex flex-col items-center mb-8"
       >
-        <img src="/logo-placeholder.png" alt="Chefs2Table Logo" className="mx-auto h-16 w-16 rounded-full" />
-        <h1 className="text-2xl font-bold mt-2">Chefs2Table</h1>
-        <p className="text-sm text-gray-600">Gourmet Meals, Exceptional Deals</p>
+        <img
+          src="/logo-placeholder.png"
+          alt="Chefs2Table Logo"
+          className="h-20 w-20 rounded-full shadow-lg border-4 border-orange-200"
+        />
+        <h1 className="text-3xl font-bold mt-4 text-orange-800 leading-tight">Chefs2Table</h1>
+        <p className="text-base text-orange-500 font-medium mt-2">Gourmet Meals, Exceptional Deals</p>
       </motion.div>
 
-      {/* Tabs for Navigation */}
-      <Tabs defaultValue="discover" className="mb-4">
-        <TabsList className="grid grid-cols-3 gap-1">
-          <TabsTrigger value="discover">Discover</TabsTrigger>
-          <TabsTrigger value="order">Order</TabsTrigger>
-          <TabsTrigger value="profile">Profile</TabsTrigger>
-        </TabsList>
-      </Tabs>
+      {/* Tabs Navigation */}
+      <nav className="mb-8 w-full max-w-xl">
+        <ul className="flex gap-8 justify-center">
+          <li><a href="#" className="text-lg text-orange-700 font-semibold hover:underline">Discover</a></li>
+          <li><a href="#" className="text-lg text-orange-700 font-semibold hover:underline">Order</a></li>
+          <li><a href="#" className="text-lg text-orange-700 font-semibold hover:underline">Profile</a></li>
+        </ul>
+      </nav>
 
-      {/* Discover Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        <Card className="mb-4">
-          <CardContent className="p-4">
-            <div className="flex justify-between items-center">
-              <div>
-                <h2 className="text-lg font-semibold">🔥 Chef Maria</h2>
-                <p className="text-sm text-muted">Authentic Cuban Cuisine</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm font-medium">4.9</span>
-              </div>
+      {/* Discover Section: Responsive Cards */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white rounded-xl shadow-md p-6 flex flex-col"
+        >
+          <div className="flex justify-between items-center mb-3">
+            <div>
+              <h2 className="text-xl font-bold text-orange-900 flex items-center gap-2">
+                <span>🔥 Chef Maria</span>
+              </h2>
+              <p className="text-sm text-orange-500">Authentic Cuban Cuisine</p>
             </div>
-            <p className="text-sm mt-2">Today's Dish: Ropa Vieja with Plantains</p>
-            <Button className="mt-3 w-full">Order Now</Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <div className="flex justify-between items-center">
-              <div>
-                <h2 className="text-lg font-semibold">👨‍🍳 Hidden Chef Amir</h2>
-                <p className="text-sm text-muted">Persian Fusion</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm font-medium">4.8</span>
-              </div>
+            <div className="flex items-center gap-1">
+              <Star className="w-5 h-5 text-yellow-500" />
+              <span className="text-base font-semibold text-gray-800">4.9</span>
             </div>
-            <p className="text-sm mt-2">Today's Dish: Saffron Chicken Tahdig</p>
-            <Button className="mt-3 w-full">Order Now</Button>
-          </CardContent>
-        </Card>
-      </motion.section>
+          </div>
+          <p className="mt-2 text-gray-700 text-sm">Today's Dish: Ropa Vieja with Plantains</p>
+          <button className="mt-6 px-6 py-2 bg-orange-500 text-white font-bold rounded-lg shadow hover:bg-orange-600 transition-all w-full">Order Now</button>
+        </motion.div>
 
-      {/* Footer Icons */}
-      <footer className="fixed bottom-0 left-0 right-0 bg-white shadow-md p-2 flex justify-around">
-        <Button variant="ghost" className="flex flex-col items-center">
-          <Flame className="w-5 h-5" />
-          <span className="text-xs">Trending</span>
-        </Button>
-        <Button variant="ghost" className="flex flex-col items-center">
-          <ShoppingCart className="w-5 h-5" />
-          <span className="text-xs">Orders</span>
-        </Button>
-        <Button variant="ghost" className="flex flex-col items-center">
-          <Brain className="w-5 h-5" />
-          <span className="text-xs">AI Picks</span>
-        </Button>
-        <Button variant="ghost" className="flex flex-col items-center">
-          <MapPin className="w-5 h-5" />
-          <span className="text-xs">Near Me</span>
-        </Button>
-      </footer>
-    </main>
-  );
-}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="bg-white rounded-xl shadow-md p-6 flex flex-col"
+        >
+          <div className="flex justify-between items-center mb-3">
+            <div>
+              <h2 className="text-xl font
