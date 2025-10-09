@@ -39,13 +39,13 @@ function Nav() {
             }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', color: 'rgba(209, 139, 8, 1)', backgroundColor: 'rgba(209, 139, 8, 1)', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
             </div>
           </div>
         </div>
