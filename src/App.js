@@ -59,7 +59,7 @@ function Hero() {
     <section className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
       <div>
         <motion.h2 initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
-          Home-cooked meals, delivered by expert local chefs
+          Home-cooked meals, delivered by expert local chefs.
         </motion.h2>
         <motion.p initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.06 }} className="mt-4 text-slate-700 max-w-xl">
           Discover unique menus prepared with seasonal ingredients. Browse local chefs, order a meal, and support culinary creators in your community.
