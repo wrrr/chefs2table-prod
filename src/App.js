@@ -9,7 +9,7 @@ function Nav() {
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', fontFamily: "'Inter', system-ui, sans-serif", width: 'fit-content' }}>
-            <div style={{ display: 'inline', fontSize: 45, fontWeight: 500, lineHeight: '68px' }}>
+            <div style={{ display: 'inline', fontSize: 45, fontWeight: 600, lineHeight: '68px', letterSpacing: '-0.5px' }}>
               Chefs2Table.com
             </div>
             <div style={{ fontSize: '12px', fontWeight: 400, lineHeight: '14px', alignSelf: 'flex-end', color: 'rgb(0, 0, 0)', marginTop: '-8px' }}>
