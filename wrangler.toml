@@ -1,0 +1,6 @@
+name = "chefs2table-worker"
+main = "worker.js"
+compatibility_date = "2025-10-08"
+
+[observability.logs]
+enabled = true
