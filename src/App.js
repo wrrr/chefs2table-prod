@@ -12,8 +12,8 @@ function Nav() {
             <div style={{ display: 'inline', fontSize: 45, fontWeight: 600, lineHeight: '68px' }}>
               Chefs2Table.com
             </div>
-            <div style={{ fontSize: '21px', fontWeight: 600, lineHeight: '0px', alignSelf: 'flex-end' }}>
-              <div style={{ fontWeight: 600 }}>
+            <div style={{ fontSize: '11px', fontWeight: 400, lineHeight: '14px', alignSelf: 'flex-end', color: 'rgb(0, 0, 0)' }}>
+              <div style={{ fontWeight: 400 }}>
                 Gourmet Meals, Exceptional Deals
               </div>
             </div>
