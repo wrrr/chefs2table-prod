@@ -8,7 +8,7 @@ function Nav() {
     <header className="sticky top-4 z-40">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', fontFamily: "'Poppins', Inter, sans-serif", width: 'fit-content' }}>
+          <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', fontFamily: "'Inter', system-ui, sans-serif", width: 'fit-content' }}>
             <div style={{ display: 'inline', fontSize: 45, fontWeight: 500, lineHeight: '68px' }}>
               Chefs2Table.com
             </div>
