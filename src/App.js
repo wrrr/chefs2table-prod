@@ -8,26 +8,25 @@ function Nav() {
     <header className="sticky top-4 z-40">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', font: '400 26px/54px __Inter_d65c78, sans-serif' }}>
-            <div style={{ display: 'inline', fontSize: 45, fontWeight: 600, lineHeight: '68px', marginRight: 'auto' }}>
+          <div style={{ color: 'rgb(144, 26, 24)', display: 'flex', flexDirection: 'column', fontFamily: "'Inter', system-ui, sans-serif", width: 'fit-content' }}>
+            <div style={{ display: 'inline', fontSize: 45, fontWeight: 600, lineHeight: '68px', letterSpacing: '-0.5px' }}>
               Chefs2Table.com
             </div>
-          </div>
-
-          <div style={{ fontSize: '21px', fontWeight: 600, lineHeight: '0px', margin: '0 auto' }}>
-            <div style={{ fontWeight: 600, textIndent: '42px' }}>
-              Gourmet Meals, Exceptional Deals
+            <div style={{ fontSize: '12px', fontWeight: 400, lineHeight: '14px', alignSelf: 'flex-end', color: 'rgb(0, 0, 0)', marginTop: '-8px' }}>
+              <div style={{ fontWeight: 400 }}>
+                Gourmet Meals, Exceptional Deals
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Red navigation band per diff */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '34px', marginTop: '15px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, gap: '34px', margin: '24px 0 -3px', padding: '0 200px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: 30, height: 65, backgroundColor: 'rgba(199, 64, 64, 1)' }}>
           <div
             style={{
-              gap: 20,
+              gap: '27px',
               display: 'flex',
               alignItems: 'center',
               fontWeight: 400,
@@ -36,17 +35,17 @@ function Nav() {
               justifyContent: 'center',
               color: 'rgba(175, 27, 27, 1)',
               lineHeight: '20px',
-              backgroundColor: 'rgba(199, 64, 64, 1)'
+              backgroundColor: 'rgba(255, 255, 255, 1)'
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Discover</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', backgroundColor: 'rgba(209, 139, 8, 1)', borderRadius: '11px', overflow: 'hidden' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Order</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%' }}>
-              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '34px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
+            <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 400, textAlign: 'center', width: '33%', color: 'rgba(209, 139, 8, 1)', backgroundColor: 'rgba(209, 139, 8, 1)', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', overflow: 'hidden' }}>
+              <div style={{ color: 'rgb(255, 255, 255)', fontSize: '32px', fontWeight: 400, lineHeight: '45px', margin: '0 auto' }}>Profile</div>
             </div>
           </div>
         </div>
@@ -60,7 +59,7 @@ function Hero() {
     <section className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
       <div>
         <motion.h2 initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
-          Home-cooked meals, delivered by expert local chefs
+          Home-cooked meals, delivered by expert local chefs.
         </motion.h2>
         <motion.p initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.06 }} className="mt-4 text-slate-700 max-w-xl">
           Discover unique menus prepared with seasonal ingredients. Browse local chefs, order a meal, and support culinary creators in your community.
