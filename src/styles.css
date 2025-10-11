@@ -10,7 +10,9 @@
   --max: 1160px;
 }
 
-/* Reset & Base */
+/* ===========================
+   Reset & Base
+=========================== */
 * {
   box-sizing: border-box;
 }
@@ -30,14 +32,18 @@ a {
   text-decoration: none;
 }
 
-/* Layout */
+/* ===========================
+   Layout Containers
+=========================== */
 .container {
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header */
+/* ===========================
+   Header / Navigation
+=========================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -61,10 +67,13 @@ a {
   gap: 12px;
 }
 
+/* ===========================
+   Logo & Brand Text
+=========================== */
 .logo {
   display: grid;
   place-items: center;
-  width: 52px;
+  width: 52px; /* desktop size */
   height: 52px;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--red), #c53b31);
@@ -72,7 +81,7 @@ a {
 }
 
 .brand h1 {
-  font-size: 18px;
+  font-size: 18px; /* desktop */
   margin: 0;
   color: var(--red);
   font-weight: 800;
@@ -84,6 +93,9 @@ a {
   font-weight: 600;
 }
 
+/* ===========================
+   Navigation Links
+=========================== */
 .links {
   display: flex;
   gap: 18px;
@@ -117,7 +129,9 @@ a {
   box-shadow: 0 8px 24px rgba(155, 28, 24, 0.25);
 }
 
-/* Hero Section */
+/* ===========================
+   Hero Section
+=========================== */
 .hero {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -134,7 +148,7 @@ a {
 }
 
 .hero-card h2 {
-  font-size: 28px; /* reduced size for balance */
+  font-size: 28px;
   line-height: 1.25;
   margin: 0 0 10px;
 }
@@ -144,7 +158,9 @@ a {
   margin: 0 0 16px;
 }
 
-/* Aside Section */
+/* ===========================
+   Aside Section
+=========================== */
 .aside {
   background: linear-gradient(180deg, #fff, #fff8ef);
   border-radius: var(--radius);
@@ -162,7 +178,9 @@ a {
   border-radius: 12px;
 }
 
-/* Chef Grid */
+/* ===========================
+   Chef Grid
+=========================== */
 .chef-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -201,7 +219,9 @@ a {
   font-size: 14px;
 }
 
-/* Responsive */
+/* ===========================
+   Responsive / Mobile
+=========================== */
 @media (max-width: 1000px) {
   .hero {
     grid-template-columns: 1fr;
@@ -213,11 +233,38 @@ a {
 }
 
 @media (max-width: 720px) {
+  /* Increase logo size for phones */
+  .logo {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* Increase site title & tagline */
+  .brand h1 {
+    font-size: 36px !important;
+  }
+
+  .brand small {
+    font-size: 20px !important;
+  }
+
+  /* Hero section becomes single column */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Chef grid single column on small phones */
   .chef-grid {
     grid-template-columns: 1fr;
   }
 
-  h2 {
-    font-size: 28px;
+  /* Adjust hero text size on mobile */
+  .hero-card h2 {
+    font-size: 32px;
+  }
+
+  .hero-card p {
+    font-size: 18px;
   }
 }
