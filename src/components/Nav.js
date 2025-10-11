@@ -11,7 +11,7 @@ export default function Nav() {
           </div>
           <div>
             <h1>Chefs2Table</h1>
-            <small>Gourmet Meals - Incredible Deals</small>
+            <small>Gourmet Meals - Incredible Deals.</small>
           </div>
         </div>
 
@@ -24,4 +24,3 @@ export default function Nav() {
     </header>
   );
 }
-
