@@ -4,33 +4,33 @@
 .site-header {
   position: sticky;               /* header sticks to top */
   top: 0;
-  background: rgba(255, 255, 255, 0.95); /* semi-transparent */
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid #f5e9e3;
   z-index: 1000;
-  padding: 0.5rem 1rem;          /* reduced vertical padding for mobile */
+  padding: 1rem 2rem;             /* increased padding for larger logo */
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
 }
 
 /* Brand: logo + text */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 /* Logo */
 .logo {
   display: grid;
   place-items: center;
-  width: 200px; /* enlarged for mobile scaling */
-  height: 200px; 
+  width: 400px; /* desktop logo doubled in size */
+  height: 400px;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--red), #c53b31);
   box-shadow: var(--shadow);
@@ -38,7 +38,7 @@
 
 /* Site title & tagline */
 .brand h1 {
-  font-size: 2.2rem; /* larger for mobile */
+  font-size: 36px; /* twice the original desktop size */
   margin: 0;
   color: var(--red);
   font-weight: 800;
@@ -48,7 +48,7 @@
   display: block;
   color: var(--muted);
   font-weight: 600;
-  font-size: 1.1rem; /* scale tagline proportionally */
+  font-size: 2.2rem; /* scaled proportionally with logo */
 }
 
 /* Navigation links */
@@ -85,27 +85,27 @@
 .hero {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 24px;
+  gap: 32px;                     /* slightly bigger gap for larger layout */
   align-items: center;
-  padding: 24px 0 12px; /* reduced top/bottom padding for mobile */
+  padding: 32px 0 16px;
 }
 
 .hero-card {
   background: linear-gradient(180deg, var(--cream), #fff);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 24px; /* slightly reduced for mobile */
+  padding: 40px;                  /* increased padding for larger header */
 }
 
 .hero-card h2 {
-  font-size: 2.2rem; /* scale with logo */
+  font-size: 3rem;               /* scale with enlarged logo */
   line-height: 1.2;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 .hero-card p {
   color: #333;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 /* Hero image */
@@ -113,6 +113,7 @@
   width: 100%;
   border-radius: 18px;
   object-fit: cover;
+  max-height: 600px;              /* cap height for large logos */
 }
 
 /* ===========================
@@ -120,17 +121,47 @@
    =========================== */
 @media (max-width: 1000px) {
   .hero {
-    grid-template-columns: 1fr;   /* stack hero content on smaller screens */
+    grid-template-columns: 1fr;
     text-align: center;
+    gap: 24px;
   }
 
   .logo {
-    width: 180px;                  /* slightly smaller on tablet */
-    height: 180px;
+    width: 280px;                /* tablet logo size */
+    height: 280px;
   }
 
   .brand h1 {
-    font-size: 2rem;
+    font-size: 28px;
+  }
+
+  .brand small {
+    font-size: 1.8rem;
+  }
+
+  .hero-card {
+    padding: 28px;
+  }
+
+  .hero-card h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .logo {
+    width: 160px;                /* mobile logo enlarged relative to viewport */
+    height: 160px;
+  }
+
+  .brand h1 {
+    font-size: 1.8rem;
   }
 
   .brand small {
@@ -138,35 +169,18 @@
   }
 
   .hero-card {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 720px) {
-  .hero {
-    grid-template-columns: 1fr;   /* single column for phones */
-    gap: 16px;
-    padding: 16px 0;
-  }
-
-  .logo {
-    width: 160px;                  /* mobile logo enlarged relative to viewport */
-    height: 160px;
-  }
-
-  .brand h1 {
-    font-size: 1.8rem;             /* scale down slightly */
-  }
-
-  .brand small {
-    font-size: 0.95rem;
-  }
-
-  .hero-card {
     padding: 16px;
   }
 
   .hero-card h2 {
-    font-size: 1.8rem;             /* scales with logo and card */
+    font-size: 1.6rem;
+  }
+
+  .hero-card p {
+    font-size: 0.95rem;
+  }
+
+  .hero img {
+    max-height: 300px;            /* mobile hero image cap */
   }
 }
