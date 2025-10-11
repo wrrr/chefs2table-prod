@@ -58,21 +58,29 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
 }
 
 .logo {
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 104px;
+  height: 104px;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--red), #c53b31);
   box-shadow: var(--shadow);
 }
 
+/* Logo image base styles (mirrors previous inline styles) */
+.logo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
 .brand h1 {
-  font-size: 18px;
+  font-size: 36px;
   margin: 0;
   color: var(--red);
   font-weight: 800;
@@ -82,6 +90,7 @@ a {
   display: block;
   color: var(--muted);
   font-weight: 600;
+  font-size: 26px;
 }
 
 .links {
@@ -312,6 +321,12 @@ footer {
   .how{grid-template-columns:1fr}
   .recruit{grid-template-columns:1fr}
   .tests{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:991px){
+  /* Apply diff: make logo container flex column and adjust image */
+  .logo{display:flex;flex-direction:column;align-items:center;width:104px;height:auto}
+  .logo-img{width:100%;height:auto;max-width:500px;flex-grow:1;margin:auto}
 }
 
 @media(max-width:720px){

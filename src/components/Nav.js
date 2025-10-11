@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo.png"; // <-- update this to your logo file name
 
 export default function Nav() {
   return (
@@ -7,7 +6,7 @@ export default function Nav() {
       <div className="container nav">
         <div className="brand">
           <div className="logo">
-            <img src={logo} alt="Logo" style={{ width: "100%", height: "100%", borderRadius: "12px" }} />
+            <img src="https://chefs2table-prod.pages.dev/static/media/logo.6770dd392fcaab29d6ce.png" alt="Logo" className="logo-img" />
           </div>
           <div>
             <h1>Chefs2Table</h1>
